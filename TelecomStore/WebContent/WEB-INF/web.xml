@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>T_139_Gp_C_Retailer</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>Login.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>Login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>DefectiveController</display-name>
+    <servlet-name>DefectiveController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.DefectiveController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DefectiveController</servlet-name>
+    <url-pattern>/DefectiveController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OrderController</display-name>
+    <servlet-name>OrderController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.OrderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderController</servlet-name>
+    <url-pattern>/OrderController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductController</display-name>
+    <servlet-name>ProductController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.ProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductController</servlet-name>
+    <url-pattern>/ProductController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetailerController</display-name>
+    <servlet-name>RetailerController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.RetailerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetailerController</servlet-name>
+    <url-pattern>/RetailerController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RewardsController</display-name>
+    <servlet-name>RewardsController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.RewardsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RewardsController</servlet-name>
+    <url-pattern>/RewardsController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShipmentController</display-name>
+    <servlet-name>ShipmentController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.ShipmentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShipmentController</servlet-name>
+    <url-pattern>/ShipmentController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PieChartServ</display-name>
+    <servlet-name>PieChartServ</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.PieChartServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PieChartServ</servlet-name>
+    <url-pattern>/PieChartServ</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>LanguageController</display-name>
+    <servlet-name>LanguageController</servlet-name>
+    <servlet-class>com.tcs.ilp.telecomstore.module3.controller.LanguageController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LanguageController</servlet-name>
+    <url-pattern>/LanguageController</url-pattern>
+  </servlet-mapping>
+  <error-page>   
+  <exception-type>com.tcs.ilp.telecomstore.module3.exception.UserExistsException</exception-type>    
+  <location>/pages/error.jsp</location>    
+  </error-page> 
+  <error-page>   
+   <exception-type>javax.servlet.ServletException</exception-type>   
+   <location>/pages/error.jsp</location>   
+  </error-page>
+  <error-page>   
+   <exception-type>java.io.IOException</exception-type>   
+   <location>/pages/error.jsp</location>   
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/pages/error.jsp</location>
+</error-page>
+<error-page>
+    <exception-type>java.lang.Throwable</exception-type >
+    <location>/pages/error.jsp</location>
+</error-page>
+ <error-page> 
+<exception-type>UnhandledException</exception-type> 
+<location>/pages/error.jsp</location> 
+</error-page>
+</web-app>

@@ -1,0 +1,13 @@
+create table LOGIN_TBL (USER_ID number, USER_NAME varchar2(20), ADDRESS varchar2(50), CONTACT_NO number, EMAIL_ID varchar2(20),PASSWORD varchar2(10), ROLE_TAGGED varchar2(10)   );
+create table  RTL_INFO_TBL( RETAILER_ID number, RETAILER_NAME varchar2(20), LOCATION varchar2(50), LICENCE_NUMBER varchar2(10), USER_ID number);
+create table RTL_PRODUCTMODEL_TBL (RETAILER_ID number, PRODUCTMODEL_ID varchar2(20), TAGGED_DATE date );
+create table PRODUCTMODEL_INFO_TBL(PRODUCTMODEL_ID varchar2(20), PRODUCTMODEL_NAME varchar2(20), PRODUCTMODEL_DESCRIPTION varchar2(30), PRODUCTMODEL_FEATURES  varchar2(40), PRODUCTMODEL_PRICE float, PRODUCTMODEL_THRESHOLD number );
+create table PRODUCT_STOCK_TBL (PRODUCT_CODE varchar2(20), PRODUCTMODEL_ID varchar2(20), PRODUCT_NAME varchar2(20), PRODUCT_STATUS varchar2(20), ORDER_ID  number);
+create table COMP_PACKAGE_TBL ( PACKAGE_ID number, OFFERS varchar2(40), MIN_ORDER_VALUE float);
+create table INVENTORY_TBL (PRODUCTMODEL_ID varchar2(20), QUANTITY number );
+create table ORDER_TBL (ORDER_ID number, RETAILER_ID number, ORDER_DATE date, ORDER_AMOUNT float);
+create table ORDER_PRODUCTMODEL_TBL (ORDER_ID number, PRODUCTMODEL_ID varchar2(20),QUANTITY number  );
+create table ORDER_SHIPMENT_TBL (ORDER_ID number, CUSTOMER_ID number, CUSTOMER_NAME varchar2(20), SHIPMENT_ADDRESS varchar2(50),PHONE_NO number, EMAIL_ID varchar2(20));
+create table RETAILER_REWARDS_TBL (REWARD_ID number, RETAILER_ID number,PACKAGE_ID number, REWARD_DATE date, REWARD_STATUS varchar2(10));
+create table REWARDS_PRODUCT_TBL (REWARD_ID number, PRODUCT_CODE varchar2(20));
+create table DEFECT_PRODUCT_ORDER (ORDER_ID number, DEFECT_PRODUCT_CODE varchar2(20), REPLACEMENT_PRODUCT_CODE varchar2(20));

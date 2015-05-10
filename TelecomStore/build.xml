@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="my-ant-proj" basedir=".">
+<target name="init">
+<property name='src.dir' location='${basedir}/src' />
+<property name='webcontent.dir' location='${basedir}/WebContent' />
+<property name='dist.dir' location='${basedir}/dist' />
+<property name='webinf.dir' location='${webcontent.dir}/WEB-INF' />
+<property name='webinfclasses.dir' location='${webcontent.dir}/WEB-INF/classes' />
+<property name='buildclasses.dir' location='${basedir}/build/classes' />
+<property name='tomcatlib.dir' location='D:/J2EE/apache-tomcat-6.0.32/apache-tomcat-6.0.32/lib' />
+</target>
+<target name='clean' depends='init' >
+<delete dir="${dist.dir}"></delete>
+<delete dir="${buildclasses.dir}/dist/* "></delete>
+</target>
+<target name='initdirs' depends='init'>
+<mkdir dir='${dist.dir}' />
+
+</target>
+<target name='compile' depends='initdirs'>
+<javac srcdir='${src.dir}' destdir='${buildclasses.dir}' >
+<classpath>
+<fileset dir='${tomcatlib.dir}' />
+<fileset dir='${webinf.dir}/lib' />
+
+</classpath>
+</javac>
+</target>
+
+<target name='build' depends='compile'>
+<copy todir='${dist.dir}' >
+<fileset dir='${webcontent.dir}' >
+</fileset>
+</copy>
+
+</target>
+<target name='war' depends='build'>
+<war destfile="${basedir}/dist/myproject.war" >
+<fileset dir='${webcontent.dir}' />
+<classes dir='${buildclasses.dir}' />
+</war>
+</target>
+
+</project>
+
